@@ -6,6 +6,8 @@
 
 이 저장소는 팀 저장소 [`S15A108/BEEZ`](https://github.com/S15A108/BEEZ)를 포크해 포트폴리오용 소개를 더한 저장소입니다. 코드와 커밋 이력은 원본 `dev` 브랜치와 같고, 이 README와 [`docs/screenshots/`](docs/screenshots/)만 추가했습니다.
 
+**박민용이 맡은 일** — 프론트엔드를 맡아 3D 사무실과 업무 화면을 구현하고, 화면에 필요한 API를 백엔드·AI 담당자와 조율했습니다. [Team Contributions에서 자세히 보기 →](#team-contributions)
+
 ![BEEZ 3D 사무실 — 팀원·에이전트·비비와 지금 할 일](docs/screenshots/beez-01-office.png)
 
 <p align="center">
@@ -179,10 +181,11 @@ flowchart LR
 
 - 빈 저장소에서 Vite·React·TypeScript 프론트엔드를 세팅하고 lint·포맷·테스트·빌드를 `npm run check` 하나로 묶어 팀 CI 기준으로 만들었습니다.
 - 목 어댑터로 전체 흐름을 먼저 구현하고, 백엔드 서비스 코드와 대조해 목과 실서버가 다른 곳 40건을 머지 전에 고쳤습니다.
-- 화면 수정안에 필요한 API를 공용 명세 diff로 제안해 새 REST API 16개와 정책 질문 Q14~Q23을 백엔드·AI 리뷰로 합의했습니다.
+- 화면 수정안에 필요한 REST API 16개를 공용 명세 diff로 제안하고, 정책 질문 10건(Q14~Q23)을 정리해 백엔드·AI 담당자의 리뷰를 명세에 반영했습니다.
 - 원형 고리 도시, 건물 외관별 사무실과 시간대 빛, 캐릭터·에이전트·비비 배치와 걷기 시뮬레이션을 three.js와 React Three Fiber로 구현했습니다.
 - 문서함·변경 제안·회의실·작업 현황·설계 관계 그래프·대시보드 업무 창을 서버 계약에 맞춰 구현했습니다.
-- 3D 화면 E2E 간헐 실패를 headless 렌더러 문제로 좁혀 전체 E2E를 3.9분에서 24초로 줄이고, 디자인 토큰을 조정해 글자 대비를 WCAG AA 기준에 맞췄습니다.
+- 3D 사무실 이동 테스트가 워커 1개에서도 6번 모두 실패하던 원인을 headless 셸의 CPU WebGL 렌더링(1인칭 프레임 1.4~2초)으로 좁히고, GPU를 쓰는 Chromium으로 바꿔 같은 커밋에서 E2E 10개가 22~26초에 3번 연속 통과하는 것을 확인했습니다.
+- 화면마다 고치지 않고 디자인 토큰을 조정해 글자 대비를 WCAG AA 기준에 맞췄습니다.
 - 관련 작업: [#7](https://github.com/S15A108/BEEZ/pull/7), [#42](https://github.com/S15A108/BEEZ/pull/42), [#72](https://github.com/S15A108/BEEZ/pull/72), [#88](https://github.com/S15A108/BEEZ/pull/88), [#124](https://github.com/S15A108/BEEZ/pull/124), [#193](https://github.com/S15A108/BEEZ/pull/193), [#221](https://github.com/S15A108/BEEZ/pull/221), [#308](https://github.com/S15A108/BEEZ/pull/308), [#328](https://github.com/S15A108/BEEZ/pull/328), [#329](https://github.com/S15A108/BEEZ/pull/329)
 
 ### 전진 · [@DreamingGenie](https://github.com/DreamingGenie)
